@@ -7,6 +7,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
+import utilities.SeleniumUtils;
+
 
 
 public class HomePage {
@@ -46,8 +48,8 @@ public class HomePage {
 
 
 	public String getHowItWorksHeaderLabel() {
-		log.info("get the header value for [How It works]");
 		try {
+			SeleniumUtils.waitForElement(howItWorksLabel);
 			String actualLabel = howItWorksLabel.getText();
 			log.info("The Element is FOUND --> " + actualLabel);
 			return actualLabel;	
@@ -61,9 +63,90 @@ public class HomePage {
 
 	}
 	
+
+	public String getSellBooksLabel() {
+		try {
+			SeleniumUtils.waitForElement(sellBooksLabel);
+			String actualLabel = sellBooksLabel.getText();
+			log.info("The Element is FOUND --> " + actualLabel);
+			return actualLabel;	
+		} catch (NoSuchElementException e) {
+			log.error("The Element is not FOUND --> " + e.getMessage());
+			return null;
+		} catch (Exception e) {
+			log.error("Something went Wrong --> " + e.getMessage());
+			return null;
+		}
+
+	}
+	
+
+	public String getBuyBooksLabel() {
+		try {
+			SeleniumUtils.waitForElement(buyBooksLabel);
+			String actualLabel = buyBooksLabel.getText();
+			log.info("The Element is FOUND --> " + actualLabel);
+			return actualLabel;	
+		} catch (NoSuchElementException e) {
+			log.error("The Element is not FOUND --> " + e.getMessage());
+			return null;
+		} catch (Exception e) {
+			log.error("Something went Wrong --> " + e.getMessage());
+			return null;
+		}
+
+	}
+	
+
+	public String getRentBooksLabel() {
+		try {
+			SeleniumUtils.waitForElement(rentBooksLabel);
+			String actualLabel = rentBooksLabel.getText();
+			log.info("The Element is FOUND --> " + actualLabel);
+			return actualLabel;	
+		} catch (NoSuchElementException e) {
+			log.error("The Element is not FOUND --> " + e.getMessage());
+			return null;
+		} catch (Exception e) {
+			log.error("Something went Wrong --> " + e.getMessage());
+			return null;
+		}
+
+	}
 	
 	
+
+	public String getSupportLabel() {
+		try {
+			SeleniumUtils.waitForElement(supportLabel);
+			String actualLabel = supportLabel.getText();
+			log.info("The Element is FOUND --> " + actualLabel);
+			return actualLabel;	
+		} catch (NoSuchElementException e) {
+			log.error("The Element is not FOUND --> " + e.getMessage());
+			return null;
+		} catch (Exception e) {
+			log.error("Something went Wrong --> " + e.getMessage());
+			return null;
+		}
+
+	}
 	
+	public String getSignINLabel() {
+		try {
+			SeleniumUtils.waitForElement(loginLabel);
+			String actualLabel = loginLabel.getText();
+			log.info("The Element is FOUND --> " + actualLabel);
+			return actualLabel;	
+		} catch (NoSuchElementException e) {
+			log.error("The Element is not FOUND --> " + e.getMessage());
+			return null;
+		} catch (Exception e) {
+			log.error("Something went Wrong --> " + e.getMessage());
+			return null;
+		}
+
+	}
 	
 	
 	/**
